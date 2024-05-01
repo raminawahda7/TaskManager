@@ -50,7 +50,7 @@ exports.login = (req , res , next) => {
                 let token = jwt.sign({
                     email:userLogedIn.email,
                     userId : userLogedIn._id.toString()
-                },"MohamedYossryFaxil" , {expiresIn:"1h"})
+                },"RamiNawahdaDost" , {expiresIn:"1h"})
                 res.status(200).json({
                     userId: userLogedIn._id.toString(),
                     token:token
@@ -99,7 +99,7 @@ exports.register = (req , res , next) => {
                     let token = jwt.sign({
                         email:email,
                         userId : success._id.toString()
-                    },"MohamedYossryFaxil" , {expiresIn:"1h"})
+                    },"RamiNawahdaDost" , {expiresIn:"1h"})
                     res.status(201).json({
                         userId: success._id.toString(),
                         token:token
